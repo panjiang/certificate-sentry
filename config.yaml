@@ -1,0 +1,7 @@
+domains:
+  - bing.com
+  - apple.com
+
+alert:
+  beforeExpired: 14d
+  notifyUrl: https://open.feishu.cn/open-apis/bot/v2/hook/xxxx

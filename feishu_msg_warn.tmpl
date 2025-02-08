@@ -1,0 +1,34 @@
+{
+    "msg_type": "interactive",
+    "card": {
+    "header": {
+            "title": {
+                "tag": "plain_text",
+                "content": "{{.Title}}"
+            },
+            "template":"red"
+        },
+
+        "elements": [
+            {
+                "tag": "div",
+                "text": {
+                    "tag": "lark_md",
+                    "content": "{{.Content}}"
+                }
+            },
+            {
+                "tag": "hr"
+            },
+            {
+                "tag": "note",
+                "elements": [
+                    {
+                        "tag": "lark_md",
+                        "content": "{{.Foot}}"
+                    }
+                ]
+            }
+        ]
+    }
+}
