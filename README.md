@@ -4,6 +4,8 @@ Check the validity period of the domain name's HTTPS certificate and trigger a L
 
 检查域名的 HTTPS 证书有效期，临近过期时触发飞书报警。
 
+![alert](./alert.jpg)
+
 ## Config
 
 ```yaml
