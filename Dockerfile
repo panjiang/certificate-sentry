@@ -7,12 +7,12 @@ ARG TARGETOS
 ARG TARGETARCH
 
 RUN --mount=type=cache,target=/go --mount=type=cache,target=/root/.cache/go-build \
-    GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o cert-checker
+    GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o certificate-sentry
 
 FROM docker.shiyou.kingsoft.com/library/alpine:3.14.0
 
-COPY --from=builder /app/cert-checker /app
+COPY --from=builder /app/certificate-sentry /app
 COPY ./config.yaml /app
 COPY ./*.tmpl /app
 
-ENTRYPOINT ["/app/cert-checker"]
+ENTRYPOINT ["/app/certificate-sentry"]

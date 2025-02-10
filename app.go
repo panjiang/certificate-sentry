@@ -114,7 +114,7 @@ func (a *App) checkOnce(ctx context.Context) {
 		err := a.sender.SendWarnMessage(TemplateData{
 			Title:   "Certification Error: Fired",
 			Content: message,
-			Foot:    "cert-checker",
+			Foot:    "certificate-sentry",
 		})
 		if err != nil {
 			a.log.Error("Send message", zap.Error(err))

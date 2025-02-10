@@ -32,7 +32,7 @@ docker run -d --restart unless-stopped \
 
 ```yaml
 services:
-  cert-checker:
+  certificate-sentry:
     container_name: certificate-sentry
     image: panjiang/certificate-sentry
     restart: unless-stopped
